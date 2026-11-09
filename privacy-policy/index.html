@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>하늘메일 개인정보처리방침</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1b1f26; --muted:#5b6472; --line:#e3e7ee; --accent:#3478f6; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg:#121417; --fg:#e8ebf0; --muted:#9aa4b2; --line:#2a2f37; --accent:#6b9cff; }
+  }
+  :root[data-theme="dark"] { --bg:#121417; --fg:#e8ebf0; --muted:#9aa4b2; --line:#2a2f37; --accent:#6b9cff; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system, "Segoe UI", "Malgun Gothic", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:28px; margin:0 0 4px; }
+  h2 { font-size:20px; margin:36px 0 10px; padding-top:20px; border-top:1px solid var(--line); }
+  p, li { color:var(--fg); }
+  .meta { color:var(--muted); font-size:14px; }
+  table { border-collapse:collapse; width:100%; font-size:15px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  a { color:var(--accent); }
+  .en { margin-top:56px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>하늘메일 (Haneul Mail for iCloud) 개인정보처리방침</h1>
+  <p class="meta">시행일: 2026-11-09 · 개발자: Haneul Mail · 앱 패키지: com.haneulmail.app</p>
+
+  <p>하늘메일(Haneul Mail for iCloud, 이하 "앱")은 Apple iCloud 메일 계정을 Android 기기에서 IMAP/SMTP 표준 프로토콜로 사용하기 위한 비공식 메일 클라이언트입니다. 앱은 개발자가 운영하는 서버를 두지 않으며, 메일 데이터를 개발자나 제3자에게 전송하지 않습니다. 무료 버전은 메일함 화면 하단에 Google AdMob 배너 광고를 표시하며(5절), Pro를 구매하면 광고와 광고 SDK가 동작하지 않습니다.</p>
+
+  <h2>1. 수집·저장하는 정보</h2>
+  <table>
+    <tr><th>항목</th><th>저장 위치</th><th>용도</th></tr>
+    <tr><td>iCloud 이메일 주소, 로그인 이름</td><td>기기 내부 저장소</td><td>메일 서버 접속</td></tr>
+    <tr><td>Apple 앱 암호(app-specific password)</td><td>기기 내부 저장소 (Android Keystore AES-GCM 암호화)</td><td>메일 서버 인증</td></tr>
+    <tr><td>폴더 목록, 메일 목록, 열어 본 메일 본문</td><td>기기 내부 저장소 (오프라인 캐시)</td><td>네트워크 없이 메일 표시</td></tr>
+    <tr><td>첨부 파일</td><td>앱 캐시 폴더 (사용자가 열었을 때만)</td><td>외부 앱으로 열기</td></tr>
+    <tr><td>원격 이미지 표시 여부 등 설정</td><td>기기 내부 저장소</td><td>사용자 설정 유지</td></tr>
+    <tr><td>최근 받는 사람 주소(보낸 메일의 받는 사람·참조)</td><td>기기 내부 저장소</td><td>메일 작성 시 주소 자동완성 (기기 주소록은 읽지 않음)</td></tr>
+    <tr><td>Pro 구매 여부(Google Play 구매 토큰)</td><td>기기 내부 저장소 (Android Keystore AES-GCM 암호화)</td><td>광고 제거 적용, 오프라인에서도 유지</td></tr>
+  </table>
+  <p>앱은 Apple ID 비밀번호를 요청하거나 읽거나 저장하지 않습니다. 앱 암호 만들기 도우미는 Apple 계정 웹페이지를 앱 안의 브라우저(WebView)로 열어 주기만 하며, 로그인은 Apple 서버와 사용자 사이에서 직접 이루어집니다.</p>
+
+  <h2>2. 정보가 전송되는 곳</h2>
+  <ul>
+    <li><strong>Apple 메일 서버</strong>: imap.mail.me.com(993, SSL/TLS), smtp.mail.me.com(587, STARTTLS). 메일을 읽고 보내는 데 필요한 통신이며 모두 암호화됩니다.</li>
+    <li><strong>Apple 계정 페이지</strong>(account.apple.com): 사용자가 앱 암호 만들기 도우미를 사용할 때만 접속합니다.</li>
+    <li><strong>메일에 포함된 외부 이미지 서버</strong>: 사용자가 설정에서 원격 이미지 표시를 켰거나 메일별로 "이미지 표시"를 눌렀을 때만 불러옵니다.</li>
+    <li><strong>Google Play 결제</strong>: Pro 구매·복원 시 Google Play가 결제를 처리합니다. 앱은 카드 번호 등 결제 정보를 받지 않으며 Google이 발급한 구매 토큰만 받습니다.</li>
+    <li><strong>Google AdMob</strong>(무료 버전만): 아래 5절.</li>
+  </ul>
+  <p>그 외의 서버로는 어떤 정보도 전송하지 않습니다. 분석(애널리틱스), 오류 보고 SDK를 사용하지 않습니다.</p>
+
+  <h2>3. 기기 권한</h2>
+  <table>
+    <tr><th>권한</th><th>용도</th></tr>
+    <tr><td>인터넷, 네트워크 상태</td><td>메일 서버 접속 및 오프라인 여부 판단</td></tr>
+    <tr><td>알림(POST_NOTIFICATIONS)</td><td>새 메일 알림 표시 (선택, 거부해도 앱 사용 가능)</td></tr>
+    <tr><td>포그라운드 서비스(FOREGROUND_SERVICE, FOREGROUND_SERVICE_SPECIAL_USE)</td><td>실시간 새 메일 알림을 위해 Apple 메일 서버와 IMAP IDLE 연결을 유지 (계정 화면에서 끌 수 있음)</td></tr>
+    <tr><td>부팅 완료 수신(RECEIVE_BOOT_COMPLETED)</td><td>기기를 다시 켠 뒤 실시간 알림 연결 복구</td></tr>
+    <tr><td>생체 인증 / 화면 잠금</td><td>계정 화면에서 저장된 앱 암호를 보여 주기 전 본인 확인 (인증 데이터는 Android 시스템이 처리하며 앱은 결과만 받음)</td></tr>
+  </table>
+
+  <h2>4. 보관 기간 및 삭제</h2>
+  <ul>
+    <li>저장된 정보는 사용자가 앱에서 <strong>로그아웃</strong>하거나 <strong>앱을 삭제</strong>하면 모두 기기에서 삭제됩니다.</li>
+    <li>오프라인 캐시는 계정별로 최근 300개 메일 목록과 최근 300개 본문까지만 보관하며 그 이상은 자동으로 정리됩니다.</li>
+    <li>앱 데이터는 Android 자동 백업 대상에서 제외됩니다(allowBackup=false).</li>
+    <li>Apple 서버에 저장된 메일은 Apple의 정책에 따르며, 앱 암호는 사용자가 Apple 계정 페이지에서 언제든지 폐기할 수 있습니다.</li>
+  </ul>
+
+  <h2>5. 광고 (무료 버전)</h2>
+  <ul>
+    <li>무료 버전은 메일함 화면 하단에 Google AdMob 배너 광고 1개를 표시합니다. 다른 화면에는 광고가 없습니다.</li>
+    <li>광고 표시를 위해 Google의 광고 SDK가 광고 ID, IP 주소, 기기·앱 정보, 광고 상호작용 정보를 Google에 전송할 수 있습니다. 처리 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>과 <a href="https://support.google.com/admob/answer/6128543">AdMob 데이터 수집 안내</a>를 따릅니다.</li>
+    <li>EEA·영국 등 동의가 필요한 지역에서는 첫 실행 시 동의 양식이 표시되며, 계정 화면의 "광고 개인정보 설정"에서 언제든 변경할 수 있습니다. 동의하지 않으면 광고가 로드되지 않습니다.</li>
+    <li>Pro를 구매하면 광고가 표시되지 않고 광고 SDK가 초기화되지 않으므로 위 전송도 일어나지 않습니다.</li>
+    <li>Android 설정에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</li>
+  </ul>
+
+  <h2>6. 아동의 개인정보</h2>
+  <p>앱은 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+  <h2>7. 방침 변경</h2>
+  <p>방침이 변경되면 이 페이지에 게시하고 시행일을 갱신합니다.</p>
+
+  <h2>8. 문의</h2>
+  <p>개인정보 관련 문의: <a href="mailto:asdw753@icloud.com">asdw753@icloud.com</a></p>
+
+  <p class="meta">Apple, iCloud는 Apple Inc.의 상표입니다. 본 앱은 Apple Inc.와 무관한 독립 개발 앱입니다.</p>
+
+  <section class="en">
+    <h1>Haneul Mail for iCloud — Privacy Policy</h1>
+    <p class="meta">Effective: 2026-11-09 · Developer: Haneul Mail · Package: com.haneulmail.app</p>
+    <p>Haneul Mail for iCloud (the "App") is an unofficial mail client that lets you use an Apple iCloud mail account on Android through the standard IMAP/SMTP protocols. The developer operates no servers, and the App never sends your mail data to the developer or to any third party. The free version shows one Google AdMob banner at the bottom of the mailbox screen (section 5); buying Pro removes the ads and the ad SDK stays inactive.</p>
+
+    <h2>1. Data stored on your device</h2>
+    <ul>
+      <li>Your iCloud email address and login name.</li>
+      <li>Your Apple app-specific password, encrypted with Android Keystore (AES-GCM).</li>
+      <li>Folder lists, message lists and the bodies of messages you have opened (offline cache).</li>
+      <li>Attachments you chose to open (app cache folder).</li>
+      <li>Preferences such as whether remote images are loaded.</li>
+      <li>Addresses you have sent mail to (To/Cc), for autocomplete in the compose screen. Your device's contacts are never read.</li>
+      <li>Whether Pro was purchased (the Google Play purchase token), encrypted with Android Keystore.</li>
+    </ul>
+    <p>The App never asks for, reads or stores your Apple ID password. The app-password helper only opens Apple's account website in an in-app browser; you sign in directly with Apple.</p>
+
+    <h2>2. Where data is sent</h2>
+    <ul>
+      <li>Apple mail servers (imap.mail.me.com:993 SSL/TLS, smtp.mail.me.com:587 STARTTLS) to read and send mail. All connections are encrypted.</li>
+      <li>account.apple.com, only when you use the app-password helper.</li>
+      <li>Image servers referenced inside a message, only if you enabled remote images or tapped "Show images" for that message.</li>
+      <li>Google Play Billing, when you buy or restore Pro. Google processes the payment; the App never sees card details, only the purchase token.</li>
+      <li>Google AdMob (free version only): see section 5.</li>
+    </ul>
+    <p>No analytics or crash-reporting SDKs are included.</p>
+
+    <h2>3. Permissions</h2>
+    <p>Internet and network state (mail access), notifications (optional, new-mail alerts), a foreground service (special use) that keeps an IMAP IDLE connection to Apple's mail server for real-time new-mail notifications (can be turned off in the account screen), boot-completed (restores that connection after a restart), and biometric/device-credential authentication before revealing your stored app password. Biometric data is handled by Android; the App only receives the result.</p>
+
+    <h2>4. Retention and deletion</h2>
+    <p>All stored data is removed from the device when you log out or uninstall the App. The offline cache keeps at most the latest 300 message summaries and 300 bodies per account. App data is excluded from Android backup. You can revoke the app-specific password at any time on Apple's account page.</p>
+
+    <h2>5. Advertising (free version)</h2>
+    <p>The free version shows a single Google AdMob banner at the bottom of the mailbox screen and nowhere else. To serve it, Google's ad SDK may send your advertising ID, IP address, device and app information and ad interactions to Google, as described in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and the <a href="https://support.google.com/admob/answer/6128543">AdMob data disclosure</a>. In the EEA/UK a consent form is shown on first launch and can be changed later from the account screen ("Ad privacy settings"); without consent no ads are loaded. If you buy Pro, no ads are shown and the ad SDK is never initialised. You can reset or delete your advertising ID in Android settings.</p>
+
+    <h2>6. Children</h2>
+    <p>The App is not directed to children under 13 and does not knowingly collect their data.</p>
+
+    <h2>7. Contact</h2>
+    <p><a href="mailto:asdw753@icloud.com">asdw753@icloud.com</a></p>
+    <p class="meta">Apple and iCloud are trademarks of Apple Inc. This App is an independent product not affiliated with Apple Inc.</p>
+  </section>
+</main>
+</body>
+</html>
